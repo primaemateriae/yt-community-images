@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yt-community-images"
+version = "0.2.0"
+description = "Download public YouTube Community post and channel images at maximum available quality"
+requires-python = ">=3.10"
+dependencies = ["requests>=2.28,<3"]
+
+[project.scripts]
+yt-community-images = "yt_community_images.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
